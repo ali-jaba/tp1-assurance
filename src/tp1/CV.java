@@ -18,6 +18,14 @@ public class CV {
 		attente = pAttente;
 	}
 	
+	public void affichage() {
+		System.out.println("nom : " + nom);
+		System.out.println("prenom : " + prenom);
+		System.out.println("formation : " + formation);
+		System.out.println("experience : " + experience + " an(s)");
+		System.out.println("competences : " + competences);
+		System.out.println("attente : " + attente);
+	}
 	
 	
 }
