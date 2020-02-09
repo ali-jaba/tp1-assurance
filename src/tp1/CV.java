@@ -19,11 +19,15 @@ public class CV {
 	}
 	
 	public void affichage() {
-		System.out.println("nom : " + nom);
+		System.out.println("\nnom : " + nom);
 		System.out.println("prenom : " + prenom);
 		System.out.println("formation : " + formation);
 		System.out.println("experience : " + experience + " an(s)");
-		System.out.println("competences : " + competences);
+		System.out.print("competences : ");
+		for (int i = 0; i < competences.length; i++) {
+			System.out.print(competences[i]);
+		}
+		
 		System.out.println("attente : " + attente);
 	}
 	
