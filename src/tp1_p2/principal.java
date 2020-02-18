@@ -1,6 +1,6 @@
 package tp1_p2;
 
-import java.io.BufferedReader;
+import java.io.BufferedReader; 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -13,6 +13,9 @@ public class principal {
 	public static void main(String[] args) throws IOException {
 		
 		String[] tableau = lireFichier(new File("entree.txt").getAbsolutePath());
+		for (int i = 0; i < tableau.length; i++) {
+			System.out.println(tableau[i]);
+		}
 		
 		Plats[] tabPlats = new Plats[3];
 		tabPlats[0] = new Plats(tableau[5], Double.valueOf(tableau[6]));
@@ -24,11 +27,10 @@ public class principal {
 		tabCli[1] = new Client(tableau[2]);
 		tabCli[2] = new Client(tableau[3]);
 		
-		Commandes[] tabComm = new Commandes[3];
+		Commandes comm1 = new Commandes(tableau[12], tableau[13], Integer.parseInt(tableau[14]));
+			
 		
-		tabComm[0] = new Commandes(tableau[13], tableau[14], Integer.parseInt(tableau[15]));
-		tabComm[1] = new Commandes(tableau[16], tableau[17], Integer.parseInt(tableau[18]));
-		tabComm[2] = new Commandes(tableau[19], tableau[20], Integer.parseInt(tableau[21]));
+		
 	}
 	
 	

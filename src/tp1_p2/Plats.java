@@ -3,13 +3,13 @@ package tp1_p2;
 public class Plats {
 
 	
-	public String plats;
+	public String nom;
 	public double prix;
 	
 	
-	public Plats(String plats, double prix) {
+	public Plats(String nom, double prix) {
 		
-		this.plats = plats;
+		this.nom = nom;
 		this.prix = prix;
 	}
 	
