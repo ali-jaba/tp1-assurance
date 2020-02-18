@@ -14,4 +14,19 @@ public class Plats {
 	}
 	
 	
+	public String ToString() {
+		
+		return nom + prix;
+	}
+	
+	public String getNom() {
+		return this.nom;
+	}
+	
+	public static void afficher(String plats, double prix) {
+		
+		System.out.println(plats + prix);
+	}
+	
+	
 }
