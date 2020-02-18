@@ -13,7 +13,7 @@ public class principal {
 		cv1.affichage();
 		CV cv2 = new CV("Sanchez","Gregory","Vente",2,tabCv2,"Pouvoir apprendre à configurer correctement des réseaux");
 		cv2.affichage();
-		//allo 123
+		
 		
 	}
 }
