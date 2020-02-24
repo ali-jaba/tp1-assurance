@@ -1,6 +1,7 @@
 package tp1_p2;
 
-public class Commandes {
+
+	public class Commandes {
 
 	
 	
@@ -15,12 +16,13 @@ public class Commandes {
 		this.nom = nom;
 		this.plat = plat;
 		this.qnt = qnt;
+		
 	}
 	
 	public double prixTotal(int qnt, String plat) {
 		double prix = 0;
 		
-		double prixFinal;
+		double prixTot;
 
 		switch (plat) {
 
@@ -35,15 +37,13 @@ public class Commandes {
 			break;
 		}
 
-		prixFinal = prix * qnt;
+		prixTot = prix * qnt;
 
-		return prixFinal ;
+		return prixTot ;
 	}
-	public void afficher() {
-		System.out.println(this.nom);
-		System.out.println(prixTotal(qnt, plat));
+	public void afficher(double prix) {
+		System.out.print(this.nom + " " + prix+ "\n");
+		
 	}
-	
-	
-	
+		
 }
