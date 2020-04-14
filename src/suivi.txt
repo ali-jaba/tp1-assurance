@@ -1,0 +1,7 @@
+Ali : 
+-Affichage des commandes incorrect dans le terminal et dans la facture
+-Appliquer les taxe
+
+Gregory :
+-si la facture est a 0$, ne rien afficher
+-le calcul de la facture doit se faire par client
