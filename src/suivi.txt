@@ -3,5 +3,5 @@ Ali :
 -Appliquer les taxe
 
 Gregory :
--si la facture est a 0$, ne rien afficher
+-si la facture est de 0$, ne rien afficher
 -le calcul de la facture doit se faire par client
