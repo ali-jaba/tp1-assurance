@@ -43,13 +43,15 @@ public class principal {
 
 	public static String[] lireFichier(String chemin) throws FileNotFoundException, IOException {
 
-		String[] tab;
+		String[] tab = null;
 
 		try (BufferedReader br = new BufferedReader(new FileReader(chemin))) {
 			String ligne;
 
 			ligne = br.readLine();
 			tab = ligne.split(";");
+		} catch(Exception e) {
+			System.out.println("Le fichier ne respect pas les normes");
 		}
 
 		return tab;

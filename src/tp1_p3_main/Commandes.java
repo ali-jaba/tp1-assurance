@@ -1,10 +1,11 @@
 package tp1_p3_main;
 
 
-	public class Commandes {
+public class Commandes {
 
 	
-	
+	public double TPS = 0.05;
+	public double TVQ = 0.0975;
 	public String nom;
 	public String plat;
 	public int qnt;
@@ -38,8 +39,16 @@ package tp1_p3_main;
 		}
 
 		prixTot = prix * qnt;
+		
+		
 
-		return prixTot ;
+		return calculerTaxe(prixTot) ;
+	}
+	public double calculerTaxe(double total) {
+		double totalTax;
+		
+		totalTax = total * (TPS + TVQ);
+		return totalTax;
 	}
 	public void afficher(double prix) {
 		System.out.print(this.nom + " " + prix+ "\n");
