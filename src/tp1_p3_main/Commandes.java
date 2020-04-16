@@ -1,28 +1,26 @@
 package tp1_p3_main;
 
+import java.text.DecimalFormat;
 
 public class Commandes {
 
-	
 	public double TPS = 0.05;
 	public double TVQ = 0.0975;
 	public String nom;
 	public String plat;
 	public int qnt;
-	
-	
-	
+
 	public Commandes(String nom, String plat, int qnt) {
 		super();
 		this.nom = nom;
 		this.plat = plat;
 		this.qnt = qnt;
-		
+
 	}
-	
+
 	public double prixTotal(int qnt, String plat) {
 		double prix = 0;
-		
+
 		double prixTot;
 
 		switch (plat) {
@@ -39,20 +37,20 @@ public class Commandes {
 		}
 
 		prixTot = prix * qnt;
-		
-		
 
-		return calculerTaxe(prixTot) ;
+		return calculerTaxe(prixTot);
 	}
+
 	public double calculerTaxe(double total) {
 		double totalTax;
-		
-		totalTax = total * (TPS + TVQ);
-		return totalTax;
+
+		totalTax = (total * (TPS + TVQ)) + total;
+		return totalTax ;
 	}
+
 	public void afficher(double prix) {
-		System.out.print(this.nom + " " + prix+ "\n");
-		
+		System.out.print(this.nom + " " + prix + "\n");
+
 	}
-		
+
 }
