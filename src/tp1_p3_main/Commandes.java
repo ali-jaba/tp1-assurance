@@ -9,6 +9,7 @@ public class Commandes {
 	public String nom;
 	public String plat;
 	public int qnt;
+	public boolean pasDePlat = false;
 
 	public Commandes(String nom, String plat, int qnt) {
 		super();
@@ -47,9 +48,22 @@ public class Commandes {
 		totalTax = (total * (TPS + TVQ)) + total;
 		return totalTax ;
 	}
+	
+	public boolean aucunPlat() {
+		if(this.qnt==0) {
+			pasDePlat = true;
+			
+		}
+		return pasDePlat;
+		
+	}
 
 	public void afficher(double prix) {
-		System.out.print(this.nom + " " + prix + "\n");
+		
+		if(!pasDePlat) {
+			System.out.print(this.nom + " " + prix + "\n ");
+		}
+		
 
 	}
 

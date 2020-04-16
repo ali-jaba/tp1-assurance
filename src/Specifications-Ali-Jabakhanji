@@ -1,6 +1,6 @@
 -Affichage des commandes incorrect dans le terminal et dans la facture
 
-Analyser toutes les commandes qui ne respect pas ce que l'on demande avec des if 
+Analyser toutes les commandes qui ne respectent pas ce que l'on demande avec des if 
 
 Il faut que le nom du client, le plat choisi et la quantité soit inscrit pour que la facture s'affiche correctement
 
