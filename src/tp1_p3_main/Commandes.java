@@ -1,6 +1,5 @@
 package tp1_p3_main;
 
-import java.text.DecimalFormat;
 
 public class Commandes {
 
@@ -47,6 +46,7 @@ public class Commandes {
 
 		totalTax = (total * (TPS + TVQ)) + total;
 		return totalTax ;
+		
 	}
 	
 	public boolean aucunPlat() {

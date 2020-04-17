@@ -5,8 +5,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintStream;
 
 public class principal {
+	
+	
 
 	public static void main(String[] args) throws IOException {
 		System.out.println("Bienvenue chez Barette!");
@@ -38,6 +41,18 @@ public class principal {
 		tabComm[0].afficher(prix1);
 		tabComm[1].afficher(prix4);
 		tabComm[3].afficher(prix5);	
+		
+		try {
+			PrintStream myconsole = new PrintStream(new File("src/facture.txt"));
+	        System.setOut(myconsole);
+	        System.out.println("Bienvenue chez Barette!" + "\n" + "Factures : " + "\n");
+	        tabComm[0].afficher(prix1);
+			tabComm[1].afficher(prix4);
+			tabComm[3].afficher(prix5);	
+	        
+			} catch (FileNotFoundException fx) {
+				System.out.println(fx);
+			}
 	}
 	
 
@@ -56,4 +71,6 @@ public class principal {
 
 		return tab;
 	}
+	
+
 }

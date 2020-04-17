@@ -15,8 +15,20 @@ public class test {
 	@Test
 	public void testCreationCommande() throws FileNotFoundException, IOException {
 		Commandes test = new Commandes("ali","Poutine",3);
-		test.calculerTaxe(50);
+		double prix = test.prixTotal(3, "Poutine");
+		test.afficher(prix);
+		test.calculerTaxe(prix);
 		principal.lireFichier(new File("entree.txt").getAbsolutePath());
+		
+		
+	}
+	@Test
+	public void lireFichier() throws IOException {
+		String tab[] = {"Clients","Roger","Céline","Steeve","Plats","Poutine","10.5","Frites","2.5","Repas_Poulet","15.75","Commandes","Roger","Poutine","1","Céline","Frites","2","Céline","Repas_Poulet","1","Fin"};
+		principal.main(tab);
+	}
+	@Test
+	public void commande() throws IOException {
 		
 	}
 	

@@ -7,3 +7,7 @@ Il faut que le nom du client, le plat choisi et la quantité soit inscrit pour qu
 -Appliquer les taxe
 
 Appliquer a la fin les taxe sur le totals qui sont de 9,975% et 5%
+
+-Afficher correctement dans une facture les commandes des clients
+
+Mettre en sorti chaque commande dans un fichier text 

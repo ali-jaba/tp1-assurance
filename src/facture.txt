@@ -1,0 +1,6 @@
+Bienvenue chez Barette!
+Factures : 
+
+Roger 12.04875
+Céline 23.810625
+Steeve 0.0

@@ -1,6 +1,7 @@
 Ali : 
 -Affichage des commandes incorrect dans le terminal et dans la facture
 -Appliquer les taxe
+-Afficher correctement dans une facture les commandes des clients
 
 Gregory :
 -si la facture est de 0$, ne rien afficher
