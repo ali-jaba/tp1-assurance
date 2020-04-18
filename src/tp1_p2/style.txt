@@ -1,8 +1,0 @@
-variable significatif
-minuscule
-unique
-
-
-constante significatif 
-majuscule
-unique

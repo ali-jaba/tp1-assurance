@@ -1,5 +1,6 @@
 package tp1_p3_main;
 
+import java.text.DecimalFormat;
 
 public class Commandes {
 
@@ -39,32 +40,37 @@ public class Commandes {
 		prixTot = prix * qnt;
 
 		return calculerTaxe(prixTot);
+
 	}
 
 	public double calculerTaxe(double total) {
 		double totalTax;
 
 		totalTax = (total * (TPS + TVQ)) + total;
-		return totalTax ;
-		
+		return totalTax;
+
 	}
-	
+
 	public boolean aucunPlat() {
-		if(this.qnt==0) {
+		if (this.qnt != 0) {
 			pasDePlat = true;
-			
+
 		}
 		return pasDePlat;
-		
+
 	}
 
 	public void afficher(double prix) {
+		if(aucunPlat()) {
+			
 		
-		if(!pasDePlat) {
-			System.out.print(this.nom + " " + prix + "\n ");
-		}
-		
+		DecimalFormat df = new DecimalFormat();
+		df.setMaximumFractionDigits(2);
+		df.setMinimumFractionDigits(2);
+		df.setDecimalSeparatorAlwaysShown(true);
 
+		System.out.print(this.nom + "\t" + df.format(prixTotal(qnt, plat)) + "$" + "\n");
+		}
 	}
 
 }

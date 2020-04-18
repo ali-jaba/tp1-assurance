@@ -6,6 +6,9 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class principal {
 	
@@ -43,9 +46,16 @@ public class principal {
 		tabComm[3].afficher(prix5);	
 		
 		try {
+			Date actuelle = new Date();
+			DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
+	 
+			File out = new File("src/facture.txt");
+			out.renameTo(new File("src/Facture du "+dateFormat.format(actuelle)));
+			
 			PrintStream myconsole = new PrintStream(new File("src/facture.txt"));
 	        System.setOut(myconsole);
 	        System.out.println("Bienvenue chez Barette!" + "\n" + "Factures : " + "\n");
+	        
 	        tabComm[0].afficher(prix1);
 			tabComm[1].afficher(prix4);
 			tabComm[3].afficher(prix5);	
