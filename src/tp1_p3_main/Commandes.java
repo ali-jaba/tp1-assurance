@@ -55,6 +55,7 @@ public class Commandes {
 		if (this.qnt != 0) {
 			pasDePlat = true;
 
+		
 		}
 		return pasDePlat;
 
@@ -70,7 +71,18 @@ public class Commandes {
 		df.setDecimalSeparatorAlwaysShown(true);
 
 		System.out.print(this.nom + "\t" + df.format(prixTotal(qnt, plat)) + "$" + "\n");
+		}else {
+			erreur(prix);
 		}
+		
+	}
+	
+	public void erreur(double prix) {
+		DecimalFormat df = new DecimalFormat();
+		df.setMaximumFractionDigits(2);
+		df.setMinimumFractionDigits(2);
+		df.setDecimalSeparatorAlwaysShown(true);
+		System.out.print("Les erreurs sont : \n" + this.nom + "\t" + df.format(prix) + "$" + "\n");
 	}
 
 }
