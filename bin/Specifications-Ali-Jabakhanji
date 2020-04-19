@@ -1,0 +1,13 @@
+-Affichage des commandes incorrect dans le terminal et dans la facture
+
+Analyser toutes les commandes qui ne respectent pas ce que l'on demande avec des if 
+
+Il faut que le nom du client, le plat choisi et la quantité soit inscrit pour que la facture s'affiche correctement
+
+-Appliquer les taxe
+
+Appliquer a la fin les taxe sur le totals qui sont de 9,975% et 5%
+
+-Afficher correctement dans une facture les commandes des clients
+
+Mettre en sorti chaque commande dans un fichier text 
