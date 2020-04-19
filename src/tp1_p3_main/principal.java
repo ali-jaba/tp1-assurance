@@ -45,6 +45,10 @@ public class principal {
 		tabComm[1].afficher(prix4);
 		tabComm[3].afficher(prix5);	
 		
+		SauvegarderCommande("src/facture.txt", tabComm, prix1, prix2, prix3);
+	}
+	
+	public static void SauvegarderCommande(String chemin, Commandes[] tabComm, double prix1, double prix2, double prix3 )  {
 		try {
 			Date actuelle = new Date();
 			DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
@@ -52,13 +56,13 @@ public class principal {
 			File out = new File("src/facture.txt");
 			out.renameTo(new File("src/Facture du "+dateFormat.format(actuelle)));
 			
-			PrintStream myconsole = new PrintStream(new File("src/facture.txt"));
+			PrintStream myconsole = new PrintStream(new File(chemin));
 	        System.setOut(myconsole);
 	        System.out.println("Bienvenue chez Barette!" + "\n" + "Factures : " + "\n");
 	        
 	        tabComm[0].afficher(prix1);
-			tabComm[1].afficher(prix4);
-			tabComm[3].afficher(prix5);	
+			tabComm[1].afficher(prix2);
+			tabComm[3].afficher(prix3);	
 	        
 			} catch (FileNotFoundException fx) {
 				System.out.println(fx);
